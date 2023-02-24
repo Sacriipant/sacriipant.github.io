@@ -4,9 +4,49 @@ h1 {
 }
 
 h2 {
-    color: #4bff04;
+    color: #ff04c9;
 }
 
 body {
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
+    text-align: justify;
+}
+
+p {
+    color: #15008b;
+}
+
+h4 {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+p {
+    color: white;
+    border-radius: 5px;
+    visibility: hidden;
+    width: 240px;
+    margin: 10px auto 0;
+    transition: 0.6s ease;
+}
+
+button {
+    background-color: #149eb1;
+    border-radius: 5px;
+    color: white;
+    width: 50px;
+    height: 50px;
+}
+
+.box {
+    background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding-bottom: 10px;
+    border-radius: 150px;
+}
+
+.showAnswer {
+    visibility: visible;
 }
