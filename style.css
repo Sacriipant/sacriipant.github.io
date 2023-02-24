@@ -10,6 +10,7 @@ h2 {
 body {
     background-color: rgb(255, 255, 255);
     text-align: justify;
+    overflow-x: hidden;
 }
 
 p {
@@ -51,4 +52,14 @@ button {
     visibility: visible;
 }
 
-/* test */
+.mousemove {
+    height: 50px;
+    width: 50px;
+    border: 2px solid rebeccapurple;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    position: absolute;
+    opacity: 50%;
+    z-index: -1;
+    transition: 0.2s ease;
+}
