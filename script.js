@@ -8,9 +8,9 @@ const question1 = document.getElementById("question");
 
 const Questions = [{
         id: 0,
-        q: "Question 1",
-        a: [{ text: "i-btn1", isCorrect: false },
-            { text: "i-btn2", isCorrect: true }
+        q: "Sur une èchel de 1 à 10 set qoi ton typ de mec ?",
+        a: [{ text: "1m62", isCorrect: false },
+            { text: "gaucher", isCorrect: true }
         ]
  
     },
@@ -47,11 +47,13 @@ function nav(step) {
 
 
 btn1.addEventListener('click', () => {
-    reponse.classList.add('showGoodAnswer')
+    btn1.style.background = "rgba(0, 188, 0, 0.5)";
+    btn2.style.background = "rgba(195, 0, 0, 0.5)";
 })
 
 btn2.addEventListener('click', () => {
-    reponse.classList.add('showBadAnswer')
+    btn1.style.background = "rgba(195, 0, 0, 0.5)";
+    btn2.style.background = "rgba(0, 188, 0, 0.5)";
 })
 
 prvsBtn.addEventListener('click', () => {
@@ -65,6 +67,8 @@ nextBtn.addEventListener('click', () => {
     if (step < 2) {
         ++step;
         nav(step);
+        btn1.style.background = "RGBA(139, 118, 165, 0.21)";
+        btn2.style.background = "RGBA(139, 118, 165, 0.21)";
     }
 })
 

@@ -61,6 +61,13 @@ p {
     border-radius: 200px;
 }
 
+.btn-1 {
+
+}
+.btn-2 {
+
+}
+
 .navBtnContainer {
     text-align: center;
     padding-bottom: 10px;
@@ -88,13 +95,6 @@ p {
 .showGoodAnswer {
     visibility: visible;
     background-color: green;
-    opacity: 100%;
-    transition: ease 0.2s;
-}
-
-.showBadAnswer {
-    visibility: visible;
-    background-color: red;
     opacity: 100%;
     transition: ease 0.2s;
 }
