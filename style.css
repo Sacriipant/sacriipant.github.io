@@ -46,6 +46,7 @@ p {
     font-weight: bold;
     width: 125px;
     text-decoration: none;
+    transition: ease 0.5s;
 }
 
 .twoButtons:hover {

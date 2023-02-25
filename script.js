@@ -16,17 +16,24 @@ const Questions = [{
     },
     {
         id: 1,
-        q: "Question 2",
-        a: [{ text: "1", isCorrect: true},
-            { text: "2", isCorrect: false }
+        q: "T la poule ki mange l'oeuf ou l'oeuf ki mang la poule",
+        a: [{ text: "la poule", isCorrect: true},
+            { text: "l'oeuf", isCorrect: false }
         ]
  
     },
     {
         id: 2,
-        q: "Question 3",
-        a: [{ text: "1", isCorrect: false },
-            { text: "2", isCorrect: true }
+        q: "Tu pref la vie ou la mort",
+        a: [{ text: "la vie", isCorrect: false },
+            { text: "la mort", isCorrect: true }
+        ]
+    },
+    {
+        id: 3,
+        q: "Tu sus ?",
+        a: [{ text: "askip", isCorrect: false },
+            { text: "vitfai", isCorrect: true }
         ]
     }
  
@@ -64,11 +71,15 @@ prvsBtn.addEventListener('click', () => {
 })
 
 nextBtn.addEventListener('click', () => {
-    if (step < 2) {
+    if (step < 3) {
         ++step;
         nav(step);
         btn1.style.background = "RGBA(139, 118, 165, 0.21)";
         btn2.style.background = "RGBA(139, 118, 165, 0.21)";
+    }
+    else if(step == 4) {
+        navigator.vibrate(200) // vibrate 200ms
+        alert("Gagné tu merit de m'epouser :)");
     }
 })
 
