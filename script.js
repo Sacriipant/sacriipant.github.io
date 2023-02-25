@@ -8,7 +8,7 @@ const question1 = document.getElementById("question");
 
 const Questions = [{
         id: 0,
-        q: "Injected question 1",
+        q: "Question 1",
         a: [{ text: "i-btn1", isCorrect: false },
             { text: "i-btn2", isCorrect: true }
         ]
@@ -16,7 +16,7 @@ const Questions = [{
     },
     {
         id: 1,
-        q: "injected question 2",
+        q: "Question 2",
         a: [{ text: "1", isCorrect: true},
             { text: "2", isCorrect: false }
         ]
@@ -24,7 +24,7 @@ const Questions = [{
     },
     {
         id: 2,
-        q: "injected question 3",
+        q: "Question 3",
         a: [{ text: "1", isCorrect: false },
             { text: "2", isCorrect: true }
         ]
@@ -34,6 +34,7 @@ const Questions = [{
 
 
 var step = 0;
+question1.innerText = Questions[step].q;
 
 function nav(step) {
     question1.innerText = Questions[step].q;
