@@ -1,46 +1,67 @@
+const reponse = document.getElementById('reponse'); 
 const btn1 = document.getElementById('btn-1');
 const btn2 = document.getElementById('btn-2');
-const answer = document.querySelector('p');
+const prvsBtn = document.getElementById('prvsBtn');
+const nextBtn = document.getElementById('nextBtn');
+const question1 = document.getElementById("question");
+
+
+const Questions = [{
+        id: 0,
+        q: "Injected question 1",
+        a: [{ text: "i-btn1", isCorrect: false },
+            { text: "i-btn2", isCorrect: true }
+        ]
+ 
+    },
+    {
+        id: 1,
+        q: "injected question 2",
+        a: [{ text: "1", isCorrect: true},
+            { text: "2", isCorrect: false }
+        ]
+ 
+    },
+    {
+        id: 2,
+        q: "injected question 3",
+        a: [{ text: "1", isCorrect: false },
+            { text: "2", isCorrect: true }
+        ]
+    }
+ 
+]
+
+
+var step = 0;
+
+function nav(step) {
+    question1.innerText = Questions[step].q;
+    btn1.innerText = Questions[step].a[0].text;
+    btn2.innerText = Questions[step].a[1].text; 
+}
+
+
 
 btn1.addEventListener('click', () => {
-    answer.classList.add('showAnswer')
-    answer.style.background = "red";
+    reponse.classList.add('showGoodAnswer')
 })
 
 btn2.addEventListener('click', () => {
-    answer.classList.add('showAnswer')
-    answer.style.background = "green";
+    reponse.classList.add('showBadAnswer')
 })
 
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// suit la souris
-
-const souris = document.querySelector(".mousemove");
-const questionContainer = document.querySelector(".box")
-
-
-
-window.addEventListener("mousemove", (e) => {
-    souris.style.left = e.pageX + "px";
-    souris.style.top = e.pageY + "px"; 
-});
-
-window.addEventListener("mouseup", () => {
-    souris.style.transform = "scale(1) translate(-50%, -50%)";
-    souris.style.transition = "none"
+prvsBtn.addEventListener('click', () => {
+    if (step > 0) {
+        --step;
+        nav(step);
+    }
 })
 
-window.addEventListener("mousedown", () => {
-    souris.style.transform = "scale(2) translate(-25%, -25%)";
-    souris.style.transition = "0.3s ease"
- })
- 
-questionContainer.addEventListener("mouseenter", () => {
-    questionContainer.style.opacity = "50%"
-})
-
-questionContainer.addEventListener("mouseout", () => {
-    questionContainer.style.opacity = "100%"
+nextBtn.addEventListener('click', () => {
+    if (step < 2) {
+        ++step;
+        nav(step);
+    }
 })
 

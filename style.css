@@ -13,24 +13,26 @@ body {
     overflow-x: hidden;
 }
 
-p {
-    color: #15008b;
-}
-
 h4 {
-    color: white;
+    color: #b9c0d5;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
     text-align: center;
-    padding-top: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 15px;
 }
 
 p {
+    opacity: 0%;
     color: white;
     border-radius: 5px;
     visibility: hidden;
     width: 240px;
     margin: 10px auto 0;
-    transition: 0.6s ease;
+
 }
+
 
 .twoButtons {
     background-color: RGBA(139, 118, 165, 0.21);
@@ -40,9 +42,9 @@ p {
     cursor: pointer;
     color: #b9c0d5;
     font-family: Courier New;
-    font-size: 17px;
+    font-size: 13px;
     font-weight: bold;
-    padding: 19px 44px;
+    width: 125px;
     text-decoration: none;
 }
 
@@ -55,21 +57,44 @@ p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     padding-bottom: 10px;
+    padding-top: 10px;
     border-radius: 200px;
 }
 
-.showAnswer {
-    visibility: visible;
+.navBtnContainer {
+    text-align: center;
+    padding-bottom: 10px;
+    border-radius: 200px;
 }
 
-.mousemove {
-    height: 50px;
-    width: 50px;
-    border: 2px solid rebeccapurple;
-    transform: translate(-50%, -50%);
-    border-radius: 25px;
-    position: absolute;
-    opacity: 50%;
-    z-index: -1;
-    transition: 0.2s ease;
+.navBtn {
+    background-color: RGBA(139, 118, 165, 0.21);
+    width: 110px;
+    border-radius: 28px;
+    border: 4px solid #8b76a5;
+    cursor: pointer;
+    color: #b9c0d5;
+    font-family: Courier New;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.navBtn:hover {
+    background-color: transparent;
+}
+
+.showGoodAnswer {
+    visibility: visible;
+    background-color: green;
+    opacity: 100%;
+    transition: ease 0.2s;
+}
+
+.showBadAnswer {
+    visibility: visible;
+    background-color: red;
+    opacity: 100%;
+    transition: ease 0.2s;
 }
