@@ -35,7 +35,9 @@ const Questions = [{
 
 var step = 0;
 question1.innerText = Questions[step].q;
-
+btn1.innerText = Questions[step].a[0].text;
+btn2.innerText = Questions[step].a[1].text;
+     
 function nav(step) {
     question1.innerText = Questions[step].q;
     btn1.innerText = Questions[step].a[0].text;
