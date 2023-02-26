@@ -72,7 +72,7 @@ prvsBtn.addEventListener('click', () => {
     }
 })
 
-nextBtn.addEventListener('click touchend', () => {
+nextBtn.addEventListener('click', () => {
     console.log(step);
     if (step < 3) {
         ++step;
