@@ -4,6 +4,8 @@ const btn2 = document.getElementById('btn-2');
 const prvsBtn = document.getElementById('prvsBtn');
 const nextBtn = document.getElementById('nextBtn');
 const question1 = document.getElementById("question");
+let beat = new Audio("beat.mp3");
+
 
 
 const Questions = [{
@@ -71,14 +73,16 @@ prvsBtn.addEventListener('click', () => {
 })
 
 nextBtn.addEventListener('click', () => {
+    console.log(step);
     if (step < 3) {
         ++step;
         nav(step);
         btn1.style.background = "RGBA(139, 118, 165, 0.21)";
         btn2.style.background = "RGBA(139, 118, 165, 0.21)";
     }
-    else if(step == 4) {
+    else if(step == 3) {
         navigator.vibrate(200) // vibrate 200ms
+        beat.play();
         alert("Gagné tu merit de m'epouser :)");
     }
 })
