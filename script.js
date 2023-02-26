@@ -1,9 +1,9 @@
-const reponse = document.getElementById('reponse'); 
 const btn1 = document.getElementById('btn-1');
 const btn2 = document.getElementById('btn-2');
 const prvsBtn = document.getElementById('prvsBtn');
 const nextBtn = document.getElementById('nextBtn');
 const question1 = document.getElementById("question");
+const cake = document.getElementById('cakeWeeding');
 let beat = new Audio("beat.mp3");
 
 
@@ -84,7 +84,8 @@ nextBtn.addEventListener('click', () => {
         // navigator.vibrate(200) // vibrate 200ms
         beat.play();
         alert("Gagné tu merit de m'epouser :)");
-        
+        cake.style.transition = "0.5s ease";
+        cake.style.visibility = "visible";
     }
 })
 

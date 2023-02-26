@@ -68,6 +68,12 @@ p {
     border-radius: 200px;
 }
 
+.cake {
+    text-align: center;
+    padding-top: 20px;
+    visibility: hidden;
+}
+
 .navBtn {
     background-color: RGBA(139, 118, 165, 0.21);
     width: 110px;
