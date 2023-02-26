@@ -72,7 +72,7 @@ prvsBtn.addEventListener('click', () => {
     }
 })
 
-nextBtn.addEventListener('click', () => {
+nextBtn.addEventListener('click touchend', () => {
     console.log(step);
     if (step < 3) {
         ++step;
@@ -81,7 +81,7 @@ nextBtn.addEventListener('click', () => {
         btn2.style.background = "RGBA(139, 118, 165, 0.21)";
     }
     else if(step == 3) {
-        navigator.vibrate(200) // vibrate 200ms
+        // navigator.vibrate(200) // vibrate 200ms
         alert("Gagné tu merit de m'epouser :)");
     }
 })
