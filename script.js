@@ -82,8 +82,8 @@ nextBtn.addEventListener('click', () => {
     }
     else if(step == 3) {
         navigator.vibrate(200) // vibrate 200ms
-        beat.play();
         alert("Gagné tu merit de m'epouser :)");
+        beat.play();
     }
 })
 
